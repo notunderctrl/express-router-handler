@@ -2,13 +2,16 @@
 
 An Express js routes handler that will automatically generate API routes for you based on the folder structure.
 
-Folder structure example (as nested as you want it!):
+### Folder structure example (as nested as you want it!):
 
 ![](https://i.imgur.com/z98NjrW.png)
 
-`RouterHandler` options:
+### `RouterHandler` options:
+
 `app` - your express server instance.
+
 `routesPath` - the path to your routes folder - Use the `path` library to define this.
+
 `basePath` - this changes your API routing. For example: By default your requests could look something like this:
 
 - `http://localhost:3000/users`
@@ -19,7 +22,7 @@ Adding a `basePath` like `/api` will change the routing to look like this:
 
 IMPORTANT: Adding a trailing slash to `basePath` will affect your routing.
 
-CommonJS Example:
+### CommonJS Example:
 
 ```js
 const path = require('path');
@@ -41,7 +44,7 @@ app.listen(PORT, () => {
 });
 ```
 
-Typescript Example:
+### Typescript Example:
 
 ```js
 import express, { Application } from 'express';
@@ -65,7 +68,9 @@ app.listen(PORT, () => {
 
 Your route file needs to export a function
 
-CommonJS example: `/routes/users/:id/get.js`
+### CommonJS example:
+
+`/routes/users/:id/get.js`
 
 ```js
 module.exports = (req, res) => {
@@ -74,7 +79,9 @@ module.exports = (req, res) => {
 };
 ```
 
-TypeScript example: `/routes/users/:id/get.js`
+### TypeScript example:
+
+`/routes/users/:id/get.js`
 
 ```js
 import { Request, Response } from 'express';

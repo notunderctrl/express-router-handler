@@ -1,9 +1,20 @@
 {
-  "name": "routes-handler",
+  "name": "express-routes-handler",
+  "description": "Handle routes in a simpler way.",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "author": "notunderctrl <119873044+notunderctrl@users.noreply.github.com>",
+  "author": "underctrl",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notunderctrl/express-routes-handler"
+  },
+  "keywords": [
+    "express",
+    "routes",
+    "handler",
+    "typescript"
+  ],
   "scripts": {
     "dev": "tsc -w",
     "build": "rm -rf dist && tsc",

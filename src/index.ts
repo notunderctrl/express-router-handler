@@ -1,5 +1,6 @@
 import { Application } from 'express';
 import glob from 'glob';
+import path from 'path';
 
 interface RoutesHandlerOptions {
   app: Application;
@@ -7,7 +8,7 @@ interface RoutesHandlerOptions {
   basePath?: string;
 }
 
-export default class RoutesHandler {
+export = class RoutesHandler {
   private _app: Application;
   private _routesPath: string;
   private _basePath: string | undefined;
@@ -69,4 +70,4 @@ export default class RoutesHandler {
       }
     );
   }
-}
+};

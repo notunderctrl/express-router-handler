@@ -1,7 +1,7 @@
 {
   "name": "express-router-handler",
   "description": "Handle routes in a simpler way.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "author": "underctrl",
   "license": "MIT",

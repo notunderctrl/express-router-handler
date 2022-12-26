@@ -10,7 +10,7 @@ Example:
 
 ```js
 import express from 'express';
-import RoutesHandler from 'routes-handler';
+import RoutesHandler from 'express-routes-handler';
 import path from 'path';
 
 const app = express();

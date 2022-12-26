@@ -2,7 +2,8 @@
 
 An Express js routes handler that will automatically generate API routes for you based on the folder structure.
 
-Folder structure example (as nested as you want it)
+Folder structure example (as nested as you want it!):
+
 ![](https://i.imgur.com/z98NjrW.png)
 
 Example:

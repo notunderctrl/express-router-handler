@@ -1,6 +1,5 @@
 import { Application } from 'express';
 import glob from 'glob';
-import path from 'path';
 
 interface RoutesHandlerOptions {
   app: Application;
@@ -8,7 +7,7 @@ interface RoutesHandlerOptions {
   basePath?: string;
 }
 
-export = class RoutesHandler {
+export default class RoutesHandler {
   private _app: Application;
   private _routesPath: string;
   private _basePath: string | undefined;
@@ -51,23 +50,23 @@ export = class RoutesHandler {
 
           switch (requestMethod) {
             case 'get':
-              this._app.get(routePath, fileCallback.default);
+              this._app.get(routePath, fileCallback);
               break;
 
             case 'post':
-              this._app.post(routePath, fileCallback.default);
+              this._app.post(routePath, fileCallback);
               break;
 
             case 'put':
-              this._app.put(routePath, fileCallback.default);
+              this._app.put(routePath, fileCallback);
               break;
 
             case 'delete':
-              this._app.delete(routePath, fileCallback.default);
+              this._app.delete(routePath, fileCallback);
               break;
           }
         }
       }
     );
   }
-};
+}

@@ -10,13 +10,13 @@ Example:
 
 ```js
 import express from 'express';
-import RoutesHandler from 'express-routes-handler';
+import RouterHandler from 'express-router-handler';
 import path from 'path';
 
 const app = express();
 const PORT = 3000;
 
-new RoutesHandler({
+new RouterHandler({
   app,
   routesPath: path.join(__dirname, 'routes'),
   basePath: '/api', // optional

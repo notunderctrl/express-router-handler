@@ -1,5 +1,5 @@
 {
-  "name": "express-routes-handler",
+  "name": "express-router-handler",
   "description": "Handle routes in a simpler way.",
   "version": "1.0.0",
   "main": "dist/index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/notunderctrl/express-routes-handler"
+    "url": "https://github.com/notunderctrl/express-router-handler"
   },
   "keywords": [
     "express",

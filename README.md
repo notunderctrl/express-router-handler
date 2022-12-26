@@ -1,4 +1,4 @@
-# Express Routes Handler
+# Express Router Handler
 
 An Express js routes handler that will automatically generate API routes for you based on the folder structure.
 
@@ -25,4 +25,13 @@ new RoutesHandler({
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+```
+
+Your route file example (/routes/users/:id/get.js)
+
+```js
+export default = (req, res) => {
+  const id = req.params.id;
+  res.send(`User id: ${id}`);
+};
 ```

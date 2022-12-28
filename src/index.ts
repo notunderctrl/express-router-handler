@@ -35,7 +35,7 @@ export default class RoutesHandler {
             ?.split('.')[0]
             .toLowerCase();
 
-          let supportedMethods = ['get', 'post', 'put', 'delete'];
+          let supportedMethods = ['get', 'post', 'put', 'delete', 'patch'];
 
           if (!supportedMethods.includes(requestMethod as string)) {
             console.log(
@@ -63,6 +63,10 @@ export default class RoutesHandler {
 
             case 'delete':
               this._app.delete(routePath, fileCallback);
+              break;
+
+            case 'patch':
+              this._app.patch(routePath, fileCallback);
               break;
           }
         }

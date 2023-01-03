@@ -1,10 +1,11 @@
 {
   "name": "express-router-handler",
-  "description": "Handle routes in a simpler way.",
-  "version": "1.0.6",
-  "main": "dist/index.js",
+  "description": "Handle express routes in a simpler way.",
+  "version": "2.0.0",
   "author": "underctrl",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/notunderctrl/express-router-handler"
@@ -17,8 +18,7 @@
   ],
   "scripts": {
     "dev": "tsc -w",
-    "build": "rm -rf dist && tsc",
-    "start": "node dist/index.js"
+    "build": "rm -rf dist && tsc"
   },
   "dependencies": {
     "glob": "^8.0.3"

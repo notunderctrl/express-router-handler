@@ -12,31 +12,31 @@ An Express js routes handler that will automatically generate API routes for you
 
 `routesPath` - the path to your routes folder - Use the `path` library to define this.
 
-`basePath` - this changes your API routing. For example: By default your requests could look something like this:
+`prefix` - this changes your API routing. For example: By default your requests could look something like this:
 
 - `http://localhost:3000/users`
 
-Adding a `basePath` like `/api` will change the routing to look like this:
+Adding a `prefix` like `/api` will change the routing to look like this:
 
 - `http://localhost:3000/api/users`
 
-IMPORTANT: Adding a trailing slash to `basePath` will affect your routing.
+IMPORTANT: Adding a trailing slash to `prefix` will affect your routing.
 
 ### CommonJS Example:
 
 ```js
 const path = require('path');
 const express = require('express');
-const RouterHandler = require('express-router-handler');
+const RouterHandler = require('express-router-handler').default;
 
 const app = express();
 const PORT = 3000;
 
-new RouterHandler({
+RouterHandler({
   app,
   // IMPORTANT: Use the path library to define routesPath
   routesPath: path.join(__dirname, 'routes'),
-  // basePath: '/api', // optional
+  // prefix: '/api', // optional
 });
 
 app.listen(PORT, () => {
@@ -54,11 +54,11 @@ import path from 'path';
 const app: Application = express();
 const PORT = 3000;
 
-new RouterHandler({
+RouterHandler({
   app,
   // IMPORTANT: Use the path library to define routesPath
   routesPath: path.join(__dirname, 'routes'),
-  // basePath: '/api', // optional
+  // prefix: '/api', // optional
 });
 
 app.listen(PORT, () => {
@@ -86,10 +86,12 @@ module.exports = (req, res) => {
 ```js
 import { Request, Response } from 'express';
 
-module.exports = (req: Request, res: Response) => {
+export default (req: Request, res: Response) => {
   const id = req.params.id;
   res.send(`User id: ${id}`);
 };
 ```
 
-_ES6 JS currently has a few bugs related to imports/exports so I wouldn't recommend using it. So far I've tested in both CommonJS and TypeScript with the above examples and it has no issues._
+## Known issues
+
+- The library only works in CommonJS projects due to the nature of import/exports.

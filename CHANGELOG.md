@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Changed
 
 - Remove class in place of function.
+- Change "basePath" to "prefix" (no functionality change).
 - This library is only going to work in CommonJS projects due to the nature of import/exports.
 
 ### Fixed
